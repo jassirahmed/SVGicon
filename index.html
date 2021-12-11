@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            text-align: center;
+        }
+
+
+        #myicon {
+            fill: red;
+        }
+
+        .btn {
+            border: none;
+            background-color: transparent;
+        }
+
+        .svg-example {
+            position: relative;
+        }
+
+        #svg1,
+        #svg2 {
+            position: absolute;
+            top: 0%;
+            left: 36%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="svg-example">
+        <button class="btn">
+            <svg id="myicon" width="40px" height="40px" style="vertical-align: middle;" viewbox="0 0 40 40">
+                <circle cx="20" cy="20" r="18" stroke-width="5" />
+                <path d="M 10,10 30,30 M 10,30 30,10" fill="none" stroke-width="6" stroke="#fff" />
+                <text x="50" y="35" class="hide-btn">Hide
+                </text>
+            </svg>
+        </button>
+        <svg x="0px" y="0px" width="165px" height="175px" id="svg1">
+
+            <polygon fill="#9eff91"
+                points="82.689,0 0,29.1 13.067,137.436 82.777,175.75 152.846,136.917 165.908,28.585 	" />
+            <polygon fill="#1a5c19" points="157.66,34.846 82.496,9.214 82.496,166.596 145.487,131.734 	" />
+            <polygon fill="#4fff30" points="9.279,35.308 20.476,132.197 82.495,166.596 82.495,9.211 	" />
+            <path fill="#1a5c19"
+                d="M103.186,92.996l-20.69,9.675H60.689l-10.251,25.64l-19.067,0.354L82.496,14.929L103.186,92.996z M101.186,88.125L82.633,51.396L67.415,87.493h15.08L101.186,88.125z" />
+            <polygon fill="#45e62e"
+                points="82.495,14.929 82.632,51.396 99.9,87.521 82.534,87.521 82.495,102.648 106.508,102.671 117.731,128.668 135.975,129.006" />
+
+        </svg>
+        <svg x="0px" y="0px" width="165px" height="175px" id="svg2" style="display: none;">
+
+            <polygon fill="#FFBB00"
+                points="82.689,0 0,29.1 13.067,137.436 82.777,175.75 152.846,136.917 165.908,28.585 	" />
+            <polygon fill="#FFFF00" points="157.66,34.846 82.496,9.214 82.496,166.596 145.487,131.734 	" />
+            <polygon fill="#B4B412" points="9.279,35.308 20.476,132.197 82.495,166.596 82.495,9.211 	" />
+            <path fill="#FFFF00"
+                d="M103.186,92.996l-20.69,9.675H60.689l-10.251,25.64l-19.067,0.354L82.496,14.929L103.186,92.996z M101.186,88.125L82.633,51.396L67.415,87.493h15.08L101.186,88.125z" />
+            <polygon fill="#B4B412"
+                points="82.495,14.929 82.632,51.396 99.9,87.521 82.534,87.521 82.495,102.648 106.508,102.671 117.731,128.668 135.975,129.006" />
+
+        </svg>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                $("#svg2").toggle();
+            });
+        });
+    </script>
+</body>
+
+</html>
